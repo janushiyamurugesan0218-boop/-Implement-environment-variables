@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Environment Variables Simulation</title>
+    <style>
+        /* CSS Embedded inside HTML */
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .config-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #38bdf8;
+            margin-top: 0;
+            font-size: 22px;
+        }
+        .env-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .dev-mode { background-color: #eab308; color: #0f172a; }
+        .prod-mode { background-color: #10b981; color: #0f172a; }
+
+        .meta-info {
+            background-color: #0f172a;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            font-family: monospace;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        .meta-line {
+            margin-bottom: 8px;
+        }
+        .meta-line span { color: #38bdf8; }
+
+        button {
+            background-color: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.2s;
+        }
+        button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <div class="config-card">
+        <h1>App Configuration Engine</h1>
+        <div class="env-badge" id="envBadge">Loading...</div>
+
+        <div class="meta-info">
+            <div class="meta-line">API Endpoint: <span id="apiEndpoint">...</span></div>
+            <div class="meta-line">Debug Logs: <span id="debugStatus">...</span></div>
+        </div>
+
+        <button id="testApiBtn">Simulate API Request</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
